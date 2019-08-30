@@ -10,20 +10,7 @@ body{
 	background-size:100%;
 	background-attachment:fixed;
 }
-a, a img{
-	text-decoration:none;
-	border:none;
-}
-img{
-	max-width:100%;
-	height:auto;
-}
-.principal{
-	width: 960px;
-	color: #444;
-	margin: 0 auto;
-	font-family:sans-serif;
-}
+
 .cabecalho, 
 .logo, 
 .rodape,
@@ -51,6 +38,59 @@ img{
 	margin-top:40px;
 	margin-right:10px;
 }
+
+/*MENU COM DROPDOWN*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: lightgreen;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #aaa;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #bbb;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .menu{
 	background:#125103;
 }
@@ -68,6 +108,100 @@ img{
 	color:#fff;
 	padding:13px 20px;
 }
+
+/*SLIDE DE FOTOS*/
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {color: #19838d;}
+
+.container {
+  margin: 50px auto;
+  padding-bottom: 50%;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  position: relative;
+  display: block;
+  margin: 0 auto 40px;
+  box-shadow: 0 10px 10px #777;
+}
+
+.photoWrapper {
+  position: absolute;
+  animation: round 16s infinite;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.photo {
+  height: auto;
+  width: 100%;
+}
+
+p.photoDescr {
+  background-color: #8e8e8e;
+  margin: 0;
+  padding: 5px;
+}
+
+@keyframes round {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+.photoWrapper:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.photoWrapper:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.photoWrapper:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.photoWrapper:nth-child(4) {
+  animation-delay: 12s;
+}
+
+@media (max-width: 728px) {
+  .container {
+    width: 90%;
+    padding-bottom: 50%;
+  }
+}
+
+a, a img{
+	text-decoration:none;
+	border:none;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+.principal{
+	width: 960px;
+	color: #444;
+	margin: 0 auto;
+	font-family:sans-serif;
+}
+
 .corpo{
 	position:relative;
 	overflow:hidden;
@@ -108,4 +242,10 @@ img{
 .rodape{
 	padding:20px;
 	text-align:center;
+}
+
+.destak{
+	background: #1abc9c;
+	border-radius: 5px;
+	padding:5px
 }
