@@ -1,12 +1,37 @@
 /* Meu CSS */
 /* https://www.materialui.co/flatuicolors */
 
+.cabecalho, 
+.logo, 
+.rodape{
+	width:100%;
+	display:block;
+	clear:both;
+}
+.cabecalho{
+	height:100px;
+}
+
+.logo-cabecalho{
+	float:left;
+}
+
+.logo-cabecalho a{
+	font-size:50px;
+	font-style:italic;
+	text-decoration:none;
+	color:#000;
+	display:block;
+	padding:20px 0 0 0;
+}
+
 body,
 html{
 	margin:  0; 
 	padding: 0;
 	font-size:18px;
 }
+
 body{
 	/*background:#ccc url(https://www.cssauthor.com/wp-content/uploads/2013/07/Blurred-Background_2.jpg) center top no-repeat;*/
 	background:#ecf0f1
@@ -92,27 +117,6 @@ li.dropdown {
   display: block;
 }
 
-.cabecalho, 
-.logo, 
-.rodape{
-	width:100%;
-	display:block;
-	clear:both;
-}
-.cabecalho{
-	height:100px;
-}
-.logo-cabecalho{
-	float:left;
-}
-.logo-cabecalho a{
-	font-size:50px;
-	font-style:italic;
-	text-decoration:none;
-	color:#000;
-	display:block;
-	padding:20px 0 0 0;
-}
 .pesquisa{
 	float:right;
 	margin-top:40px;
