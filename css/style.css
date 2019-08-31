@@ -14,42 +14,33 @@ body{
 	background-attachment:fixed;
 }
 
-.cabecalho, 
-.logo, 
-.rodape,
-.menu{
-	width:100%;
-	display:block;
-	clear:both;
-}
-.cabecalho{
-	height:100px;
-}
-.logo-cabecalho{
-	float:left;
-}
-.logo-cabecalho a{
-	font-size:50px;
-	font-style:italic;
-	text-decoration:none;
-	color:#000;
-	display:block;
-	padding:20px 0 0 0;
-}
-.pesquisa{
-	float:right;
-	margin-top:40px;
-	margin-right:10px;
-}
-
-h2 {
-  text-align: center;
-}
-
-a {color: #3498db;}
-a:hover {color: #16a085;}
-
 /*MENU COM DROPDOWN*/
+
+.menu {
+    width:100%;
+    background:#16a085;
+	color: #fff;
+	top: 0;
+	position: sticky!important;
+	z-index: 99;
+}
+
+.menu ul li, 
+.menu ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.menu ul li{
+	display:inline-block;
+}
+
+.menu ul li a{
+	display:block;
+	color:#fff;
+	padding:13px 20px;
+}
 
 ul {
   list-style-type: none;
@@ -101,23 +92,39 @@ li.dropdown {
   display: block;
 }
 
-.menu{
-	background:#16a085;
-}
-.menu ul li, 
-.menu ul{
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-.menu ul li{
-	display:inline-block;
-}
-.menu ul li a{
+.cabecalho, 
+.logo, 
+.rodape{
+	width:100%;
 	display:block;
-	color:#fff;
-	padding:13px 20px;
+	clear:both;
 }
+.cabecalho{
+	height:100px;
+}
+.logo-cabecalho{
+	float:left;
+}
+.logo-cabecalho a{
+	font-size:50px;
+	font-style:italic;
+	text-decoration:none;
+	color:#000;
+	display:block;
+	padding:20px 0 0 0;
+}
+.pesquisa{
+	float:right;
+	margin-top:40px;
+	margin-right:10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {color: #3498db;}
+a:hover {color: #16a085;}
 
 /*SLIDE DE FOTOS*/
 
