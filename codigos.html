@@ -46,10 +46,117 @@
 					<div class="espacamento">
 						<h1 align = "center"><span class = "destak">Códigos Úteis</span></h1>
 						<h2 class="topico">Framework Kivy</h2>
+						<h3 style="color: #f1c40f">Estruturas Simples</h3>
 						<div class="codigo">
-							from kivy.base import runTouchApp<br />
-							from kivy.uix.button import Button<br />
-							runTouchApp(Button(text = "Hello Kivy!"))
+							<pre style="align: center; ">
+from kivy.base import runTouchApp
+from kivy.uix.button import Button
+runTouchApp(Button(text = "Hello Kivy!"))
+							</pre>
+						</div>
+						<br />
+						<div class="codigo">
+							<pre>
+from kivy.app import App
+from kivy.uix.button import Button
+
+class TestApp(App):
+    def build(self):
+        return Button(text='Hello Kivy')
+
+TestApp().run()
+							</pre>
+						</div>
+						<br />
+						<div class="codigo">
+							<pre>
+from kivy.app import App
+from kivy.lang import Builder
+
+kv = Builder.load_string('''
+Button:
+	text: 'Hello Kivy'
+''')
+
+class TestApp(App):
+    def build(self):
+        return kv
+
+TestApp().run()
+							</pre>
+						</div>
+						<br />
+						<h3 style="color: #f1c40f">Estruturas Complexas</h3>
+						<div class="codigo">
+							<pre>
+from kivy.app import App
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
+
+Builder.load_string('''
+<ScreenManager>:
+	Login:
+		name: "login"
+	Home:
+		name: "home"
+
+<Login>:
+	Button:
+		text: 'Hello Home'
+		on_release:
+			app.root.current = "home"
+
+<Home>:
+	Button:
+		text: 'Hello Login'
+		on_release:
+			app.root.current = "login"
+''')
+
+class Login(Screen):
+	pass
+
+class Home(Screen):
+	pass
+	
+class TestApp(App):
+	def build(self):
+		return ScreenManager()
+
+TestApp().run()
+							</pre>
+						</div>
+						<br />
+						<div class="codigo">
+							<pre>
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.base import runTouchApp
+
+Builder.load_string("""
+<MenuScreen>:
+	Button:
+		text: 'Goto settings'
+		on_press: root.manager.current = 'settings'
+
+<SettingsScreen>:
+	Button:
+		text: 'Back to menu'
+		on_press: root.manager.current = 'menu'
+""")
+
+class MenuScreen(Screen):
+	pass
+
+class SettingsScreen(Screen):
+	pass
+
+sm = ScreenManager()
+sm.add_widget(MenuScreen(name='menu'))
+sm.add_widget(SettingsScreen(name='settings'))
+
+runTouchApp(sm)
+							</pre>
 						</div>
 					</div>
 				</div>
