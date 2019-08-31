@@ -1,4 +1,6 @@
 /* Meu CSS */
+/* https://www.materialui.co/flatuicolors */
+
 body,
 html{
 	margin:  0; 
@@ -6,7 +8,8 @@ html{
 	font-size:18px;
 }
 body{
-	background:#ccc url(https://www.cssauthor.com/wp-content/uploads/2013/07/Blurred-Background_2.jpg) center top no-repeat;
+	/*background:#ccc url(https://www.cssauthor.com/wp-content/uploads/2013/07/Blurred-Background_2.jpg) center top no-repeat;*/
+	background:#ecf0f1
 	background-size:100%;
 	background-attachment:fixed;
 }
@@ -39,6 +42,13 @@ body{
 	margin-right:10px;
 }
 
+h2 {
+  text-align: center;
+}
+
+a {color: #3498db;}
+a:hover {color: #16a085;}
+
 /*MENU COM DROPDOWN*/
 
 ul {
@@ -61,7 +71,7 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: lightgreen;
+  background-color: #1abc9c;
 }
 
 li.dropdown {
@@ -71,7 +81,7 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #aaa;
+  background-color: #bdc3c7;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -85,14 +95,14 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #bbb;}
+.dropdown-content a:hover {background-color: #1abc9c;}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 .menu{
-	background:#125103;
+	background:#16a085;
 }
 .menu ul li, 
 .menu ul{
@@ -117,12 +127,6 @@ li.dropdown {
   box-sizing: border-box;
 }
 
-h2 {
-  text-align: center;
-}
-
-a {color: #19838d;}
-
 .container {
   margin: 50px auto;
   padding-bottom: 50%;
@@ -138,7 +142,7 @@ a {color: #19838d;}
 
 .photoWrapper {
   position: absolute;
-  animation: round 16s infinite;
+  animation: round 11s infinite;
   opacity: 0;
   top: 0;
   left: 0;
@@ -169,15 +173,15 @@ p.photoDescr {
 }
 
 .photoWrapper:nth-child(2) {
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 
 .photoWrapper:nth-child(3) {
-  animation-delay: 8s;
+  animation-delay: 6s;
 }
 
 .photoWrapper:nth-child(4) {
-  animation-delay: 12s;
+  animation-delay: 9s;
 }
 
 @media (max-width: 728px) {
@@ -197,7 +201,7 @@ img{
 }
 .principal{
 	width: 960px;
-	color: #444;
+	color: #2c3e50;
 	margin: 0 auto;
 	font-family:sans-serif;
 }
@@ -234,18 +238,35 @@ img{
     bottom: 0;
 	right:0;
     z-index: -1;
-    background: #f1f1f1;
+    background: #bdc3c7;
 }
 .espacamento{
 	padding:20px;
 }
+
 .rodape{
 	padding:20px;
 	text-align:center;
+	background: #16a085
 }
 
 .destak{
-	background: #1abc9c;
-	border-radius: 5px;
-	padding:5px
+	background: #16a085;
+	color: #fff;
+	border-radius: 6px;
+	padding:2px
+}
+
+.topico{
+	background: #3498db;
+	color: #fff;
+	border-radius: 6px;
+	padding:2px
+}
+
+.codigo{
+	background: #2c3e50;
+	color: #ecf0f1;
+	border-radius: 6px;
+	padding:2px
 }
