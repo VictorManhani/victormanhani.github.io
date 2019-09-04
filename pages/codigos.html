@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<title>Códigos Úteis - Victor Manhani</title>
+		
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+		<div class="principal">
+			<div class="cabecalho">
+				<div class="logo-cabecalho">
+					<a href="index.html">Meu Blog</a>
+				</div>
+				<div class="pesquisa">
+					<input type="text" />
+					<input type="submit" value="Pesquisar" />
+				</div>
+			</div>
+			<div class="menu">
+				<ul>
+					<li> <a href="index.html">Início</a> </li>
+					<li> <a href="sobre.html">Sobre</a> </li>
+					<li class="dropdown">
+						<a href="utilidades.html" class="dropbtn">Utilidades</a>
+						<div class="dropdown-content">
+							<a href="sites.html">Sites Úteis</a>
+							<a href="dicas.html">Dicas Úteis</a>
+							<a href="codigos.html">Códigos Úteis</a>
+							<a href="livros.html">Livros Úteis</a>
+							<a href="programas.html">Programas Úteis</a>
+							<a href="frases.html">Frases Úteis</a>
+							<a href="materiais.html">Materiais Úteis</a>
+						</div>
+					</li>
+					<li> <a href="contato.html">Contato</a> </li>
+				</ul>
+			</div>
+			<div class="corpo">
+				<div class="artigos">
+					<div class="espacamento">
+						<h1 align = "center"><span class = "destak">Códigos Úteis</span></h1>
+						<h2 class="topico">Framework Kivy</h2>
+						<h3 style="color: #f1c40f">Estruturas Simples</h3>
+						<div class="codigo">
+							<pre style="align: center; ">
+from kivy.base import runTouchApp
+from kivy.uix.button import Button
+runTouchApp(Button(text = "Hello Kivy!"))
+							</pre>
+						</div>
+						<br />
+						<div class="codigo">
+							<pre>
+from kivy.app import App
+from kivy.uix.button import Button
+
+class TestApp(App):
+    def build(self):
+        return Button(text='Hello Kivy')
+
+TestApp().run()
+							</pre>
+						</div>
+						<br />
+						<div class="codigo">
+							<pre>
+from kivy.app import App
+from kivy.lang import Builder
+
+kv = Builder.load_string('''
+Button:
+	text: 'Hello Kivy'
+''')
+
+class TestApp(App):
+    def build(self):
+        return kv
+
+TestApp().run()
+							</pre>
+						</div>
+						<br />
+						<h3 style="color: #f1c40f">Estruturas Complexas</h3>
+						<div class="codigo">
+							<pre>
+from kivy.app import App
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
+
+Builder.load_string('''
+<ScreenManager>:
+	Login:
+		name: "login"
+	Home:
+		name: "home"
+
+<Login>:
+	Button:
+		text: 'Hello Home'
+		on_release:
+			app.root.current = "home"
+
+<Home>:
+	Button:
+		text: 'Hello Login'
+		on_release:
+			app.root.current = "login"
+''')
+
+class Login(Screen):
+	pass
+
+class Home(Screen):
+	pass
+	
+class TestApp(App):
+	def build(self):
+		return ScreenManager()
+
+TestApp().run()
+							</pre>
+						</div>
+						<br />
+						<div class="codigo">
+							<pre>
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.base import runTouchApp
+
+Builder.load_string("""
+<MenuScreen>:
+	Button:
+		text: 'Goto settings'
+		on_press: root.manager.current = 'settings'
+
+<SettingsScreen>:
+	Button:
+		text: 'Back to menu'
+		on_press: root.manager.current = 'menu'
+""")
+
+class MenuScreen(Screen):
+	pass
+
+class SettingsScreen(Screen):
+	pass
+
+sm = ScreenManager()
+sm.add_widget(MenuScreen(name='menu'))
+sm.add_widget(SettingsScreen(name='settings'))
+
+runTouchApp(sm)
+							</pre>
+						</div>
+					</div>
+				</div>
+				<div class="barra-lateral">
+					<div class="espacamento">
+						<h1>Mais</h1>
+							<p>
+								Se algum de vocês tem falta de sabedoria, peça-a a Deus, que a todos dá livremente, de boa vontade; e lhe será concedida. - Tiago 1:5
+							</p>
+						<p>
+							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<script>
+     								(adsbygoogle = window.adsbygoogle || []).push({
+          							google_ad_client: "ca-pub-1838245597338090",
+          							enable_page_level_ads: true
+     								});
+							</script>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="rodape">
+				<a href="https://www.eletromanhani.com.br" target="_blank" style="color: #eee;" >Victor Manhani</a>
+			</div>
+		</div>
+	</body>
+</html>
+
