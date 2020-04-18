@@ -4,12 +4,19 @@
 .cabecalho, 
 .logo, 
 .rodape{
-	width:100%;
-	display:block;
-	clear:both;
+	width: 100%;
+	display: block;
+	clear: both;
 }
+
 .cabecalho{
-	height:100px;
+  height: 100px;
+}
+
+.pesquisa{
+	float: right;
+	margin-top: 40px;
+	margin-right: 10px;
 }
 
 .logo-cabecalho{
@@ -115,12 +122,6 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.pesquisa{
-	float:right;
-	margin-top:40px;
-	margin-right:10px;
 }
 
 h2 {
