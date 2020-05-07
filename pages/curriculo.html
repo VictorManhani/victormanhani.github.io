@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/style_curriculo.css">
+        <script type="text/javascript" src = "../js/jquery-3.5.0.min.js"></script>
+		<title>Currículo - Victor Manhani</title>
+	</head>
+	<body>
+		<div class="principal">
+			<div id = "cabecalho" class = "cabecalho"></div>
+            <div id = "menu" class="menu"></div>
+
+			<div class="corpo">
+				<div class="artigos">
+					<div class="espacamento">
+						<h1 align = "center"><span class = "destak">Currículo</span></h1>
+                        <table class = "form_table">
+                            <tr>
+                                <td>
+                                    <p class = "form_title">
+                                        Meu nome é <span
+                                            class="txt-rotate "
+                                            data-period="2000"
+                                            data-rotate='[ "Victor", "Gomes", "Manhani"]'>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = "form_td_title">
+                                    Contatos
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = "form_td_content">
+                                    <input class = "button" type="button" value="Celular" onClick="result1.value='+55 (11) 999999999'" >
+                                    <input class = "button" type="button" value="Fixo" onClick="result1.value='+55 (11) 22222222'" >
+                                    <input class = "button" type="button" value="email" onClick="result1.value='victorgomesmanhani@gmail.com'" >
+                                    <br />
+                                    <textarea class = "text" id="result1" style = "verflow-y: scroll;" name="result1"  rows ="1" cols="30" value=""></textarea>
+                                </td>
+                            </tr>
+                            <br />
+                            <tr>
+                                <td class = "form_td_title">
+                                    Formação Acadêmica
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = "form_td_content">
+                                    <input class = "button" type="button" value="Faculdade" onClick="result.value='Faculdade...'" >
+                                    <br />
+                                    <textarea class = "text" id="result" style = "verflow-y: scroll;" name="result"  rows ="7" cols="70" value=""></textarea>
+                                </td>
+                            </tr>
+                            <br />
+                            <tr>
+                                <td class = "form_td_title">
+                                    Conhecimentos
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = "form_td_content">
+                                    <input class = "button" type="button" value=" Cursos " onClick="result2.value='Curso de...'" >
+                                    <input class = "button" type="button" value=" Treinamentos " onClick="result2.value='Treinamento de...'" >
+                                    <input class = "button" type="button" value=" Geral " onClick="result2.value='Geral...'" >
+                                    <br />
+                                    <textarea class = "text" id="result2" style = "verflow-y: scroll;" name="result2"  rows ="7" cols="70" value=""></textarea>
+                                </td>
+                            </tr>
+                            <br />
+                            <tr>
+                                <td class = "form_td_title">
+                                    Experiências Profissionais
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = "form_td_content">
+                                    <input class = "button" type="button" value="Ver" onClick="result3.value='Empresa...'" >
+                                    <input class = "button" type="button" value="Outras Experiências Profissionais" onClick="result3.value='Trabalhos...'" >
+                                    <input class = "button" type="button" value="Atividades Complementares" onClick="result3.value='Atividades complementares...'" >
+                                    <br />
+                                    <textarea class = "text" id="result3" style = "verflow-y: scroll;" name="result3"  rows ="7" cols="70" value=""></textarea>
+                                </td>
+                            </tr>
+                            <br />
+                            <tr>
+                                <td class = "form_td_title">
+                                    Idiomas
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class = "form_td_content">
+                                    <input class = "button" type="button" value=" Inglês " onClick="result4.value='Intermediário'" >
+                                    <input class = "button" type="button" value=" Espanhol " onClick="result4.value='Básico'" >
+                                    <br />
+                                    <textarea class = "text" id = "result4" style = "verflow-y: scroll;" name="result4"  rows ="1" cols="30" value=""></textarea>
+                                </td>
+                            </tr>
+                        </table>
+					</div>
+				</div>
+
+				<div id = "barra-lateral" class = "barra-lateral"></div>
+			</div>
+			<div id = "rodape" class = "rodape"></div>
+		</div>
+		<script src="../js/jquery.js"></script>
+        <script type="text/javascript">
+            var TxtRotate = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+
+            TxtRotate.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+
+                if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+                var that = this;
+                var delta = 300 - Math.random() * 100;
+
+                if (this.isDeleting) { delta /= 2; }
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                }
+
+                setTimeout(function() {
+                    that.tick();
+                }, delta);
+            };
+
+            window.onload = function() {
+                var elements = document.getElementsByClassName('txt-rotate');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-rotate');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+                document.body.appendChild(css);
+            };
+        </script>
+	</body>
+</html>

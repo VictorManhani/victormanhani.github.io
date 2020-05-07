@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script type="text/javascript" src = "../js/jquery-3.5.0.min.js"></script>
+		<script type="text/javascript" src="../py/brython.js"></script>
+		<script type="text/javascript" src="../py/brython_stdlib.js"></script>
+        <!--
+        <script type="text/javascript"
+             src="https://cdn.jsdelivr.net/npm/brython@3.8.8/brython.min.js"> 
+        </script>
+        -->
+		<title>Python - Victor Manhani</title>
+	</head>
+	<body onload="brython(1)">
+        <div class="principal">
+            <div id = "cabecalho" class = "cabecalho"></div>
+            <div id = "menu" class = "menu"></div>
+
+			<div class="corpo">
+				<div class="artigos">
+					<div class="espacamento">
+						<h1 align = "center"><span class = "destak">Sobre</span></h1>
+						<p>
+							<img src="../img/psg2.png" />
+						</p>
+                        <p>
+                            Esta página foi criada utilizando Brython, que é 
+                            Uma implementação de <strong>Python 3</strong> para programação web no client-side.
+                        </p>
+					</div>
+				</div>
+				<div id = "barra-lateral" class = "barra-lateral"></div>>
+			</div>
+			<div id = "rodape" class = "rodape"></div>
+		</div>
+		<script src="../js/jquery.js"></script>
+		<script type="text/python">
+            from py.parts import cabecalho, menu, barra_lateral, rodape, document
+            document["cabecalho"] <= cabecalho()
+            document["menu"] <= menu()
+            document["barra-lateral"] <= barra_lateral()
+            document["rodape"] <= rodape()
+        </script>
+	</body>
+</html>

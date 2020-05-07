@@ -20,6 +20,7 @@ def menu():
     ul = UL()
 
     li_inicio = LI(A('Início', href = "index.html"))
+    li_curriculo = LI(A('Currículo', href = "curriculo.html"))
     li_sobre = LI(A('Sobre', href = "sobre.html"))
     
     a_utilidades = A('Utilidades', href = "utilidades.html", Class = "dropbtn")
@@ -37,9 +38,10 @@ def menu():
     li_utilidades <= div_utilidades
 
     li_python = LI(A('Python', href = "python.html"))
+    li_jquery = LI(A('JQuery', href = "jquery.html"))
     li_contato = LI(A('Contato', href = "contato.html"))
 
-    ul <= li_inicio + li_sobre + li_utilidades + li_python + li_contato
+    ul <= li_inicio + li_curriculo + li_sobre + li_utilidades + li_python + li_jquery + li_contato
     div <= ul
     return div
 

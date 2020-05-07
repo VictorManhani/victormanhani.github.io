@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script type="text/javascript" src = "../js/jquery-3.5.0.min.js"></script>
+		<title>Contato - Victor Manhani</title>
+	</head>
+	<body>
+		<div class="principal">
+			<div id = "cabecalho" class = "cabecalho"></div>
+            <div id = "menu" class="menu"></div>
+
+			<div class="corpo">
+				<div class="artigos">
+					<div class="espacamento">
+						<h1 align = "center"><span class = "destak">Contato</span></h1>
+						<div id="after_submit"></div>
+						<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+							<br />
+							<div class="row">
+								<label class="required" for="nomeid">Seu nome:</label><br />
+								<input id="nomeid" class="input" name="name" type="text" value="" size="30" /><br />
+								<span id="name_validation" class="por favor, preencha este campo."></span>
+							</div>
+							<br />
+							<div class="row">
+								<label class="required" for="emailid">Seu email:</label><br />
+								<input id="emailid" class="input" name="email" type="text" value="" size="30" /><br />
+								<span id="email_validation" class="error_message"></span>
+							</div>
+							<br />
+							<div class="row">
+								<label class="required" for="messageid">Sua message:</label><br />
+								<textarea id="messageid" class="input" name="message" rows="7" cols="30"></textarea><br />
+								<span id="message_validation" class="error_message"></span>
+							</div>
+							<br />
+							<input id="submit_button" type="button" onclick="Enviar();" value="Enviar" />
+						</form>
+					</div>
+				</div>
+				<div id = "barra-lateral" class = "barra-lateral"></div>
+			</div>
+			<div id = "rodape" class = "rodape"></div>
+		</div>
+		<script src="../js/jquery.js"></script>
+	</body>
+</html>

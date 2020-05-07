@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src = "js/jquery-3.5.0.min.js"></script>
+		
 		<title>Início - Victor Manhani</title>
 		
 		<style type="text/css">
@@ -18,35 +21,8 @@
 	</head>
 	<body>
 		<div class="principal">
-			<div class="cabecalho">
-				<div class="logo-cabecalho">
-					<a href="index.html">Meu Blog</a>
-				</div>
-				<div class="search">
-					<input type="text" />
-					<input type="submit" value="Pesquisar" />
-				</div>
-			</div>
-			<div class="menu">
-				<ul>
-					<li> <a href="index.html">Início</a> </li>
-					<li> <a href="sobre.html">Sobre</a> </li>
-					<li class="dropdown">
-						<a href="utilidades.html" class="dropbtn">Utilidades</a>
-						<div class="dropdown-content">
-							<a href="sites.html">Sites Úteis</a>
-							<a href="dicas.html">Dicas Úteis</a>
-							<a href="codigos.html">Códigos Úteis</a>
-							<a href="livros.html">Livros Úteis</a>
-							<a href="programas.html">Programas Úteis</a>
-							<a href="frases.html">Frases Úteis</a>
-							<a href="materiais.html">Materiais Úteis</a>
-						</div>
-					</li>
-					<li> <a href = "python.html">Python</a> </li>
-					<li> <a href="contato.html">Contato</a> </li>
-				</ul>
-			</div>
+			<div id = "cabecalho" class = "cabecalho"></div>
+            <div id = "menu" class="menu"></div>
 			<div class="corpo">
 				<div class="artigos">
 					<div class="espacamento">
@@ -62,7 +38,7 @@
 							        <img class='photo'  src="img/psg3.png" alt="" />
 							    </div>
 							</div>
-						<div class="parallax" align="center" valign="center" style="padding: 50px;">VOCÊ É ESPECIAL</div>
+						<div class="parallax" align="center" valign="center" style="padding: 50px;">Deus é BOM</div>
 						<p>
 							<h2>Monetização</h2>
 							<a href="https://direct-link.net/65018/pcinfo" target="_blank">
@@ -117,56 +93,10 @@
 						</p>
 					</div>
 				</div>
-				<div class="barra-lateral">
-					<div class="espacamento">
-						<h1>Mais</h1>
-							<p>
-								Se algum de vocês tem falta de sabedoria, peça-a a Deus, que a todos dá livremente, de boa vontade; e lhe será concedida. - Tiago 1:5
-							</p>
-						<p>
-							<img src="img/psg1.png" />
-						</p>
-						<p>
-							<img src="img/psg2.png"/>
-						</p>
-						<p>
-							<img src="img/psg3.png" />
-						</p>
-						<p>
-							<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-							<script>
-     								(adsbygoogle = window.adsbygoogle || []).push({
-          							google_ad_client: "ca-pub-1838245597338090",
-          							enable_page_level_ads: true
-     								});
-							</script>
-						</p>
-					</div>
-				</div>
+				<div id = "barra-lateral" class = "barra-lateral"></div>
 			</div>
-			<div id="disqus_thread"></div>
-			<script>
-			/**
-			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-			/*
-			var disqus_config = function () {
-				this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-				this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-			};
-			*/
-			(function() { // DON'T EDIT BELOW THIS LINE
-				var d = document, s = d.createElement('script');
-				s.src = 'https://https-victormanhani-github-io-index-html.disqus.com/embed.js';
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-			})();
-			</script>
-			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-			<div class="rodape">
-				<a href="https://www.eletromanhani.com.br" target="_blank" style="color: #eee;" >Victor Manhani</a> /
-				<a href='https://contador.s12.com.br'><img src='https://contador.s12.com.br/img-8z6dBYWZCwdzc8w7-27.gif' border='0'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=8z6dBYWZCwdzc8w7'></script>
-			</div>
+			<div id = "rodape" class = "rodape"></div>
 		</div>
+		<script src="./js/jquery.js"></script>
 	</body>
 </html>
